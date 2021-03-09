@@ -26,7 +26,7 @@ def process_data(df):
 
 def main():
     df = pd.read_csv("GamingStudy_data.csv")
-    data = process_data(df)
+    process_data(df)
 
 
 if __name__ == '__main__':

@@ -1,9 +1,13 @@
 '''
 Kiho Noh and Sophia Wei
 CSE163 Final Project: Online Gaming
+This program uses the pandas library and the matplotlib and seaborn libraries
+to implement the graphing functions in order to better display the data and
+to illustrate any patterns and/or correlations between variables in the data.
+This is to bring better insight and extra information to help answer the 3
+research questions.
 '''
 
-# Will need to comment the programs and methods eventually
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +19,11 @@ sns.set()
 
 
 def narcissism_gaming_hours(df):
+    '''
+    This function takes in a dataframe and plots a scatterplot visualization
+    between online gaming hours and narcissistic tendencies and then saves
+    this file.
+    '''
     filtered_df = df[['Hours', 'Narcissism']]
     realistic_weekly_hours = df['Hours'] <= 168
     filtered_df = filtered_df[realistic_weekly_hours]
@@ -31,6 +40,11 @@ def narcissism_gaming_hours(df):
 
 
 def narcissism_over_20_hours(df):
+    '''
+    This function takes in a dataframe and plots a regression visualization
+    between excessive online gaming hours (over 20 weekly hours) and
+    narcissistic tendencies and then saves this file.
+    '''
     filtered_df = df[['Hours', 'Narcissism']]
     over_20_hours = (df['Hours'] > 20) & (df['Hours'] <= 168)
     filtered_df = filtered_df[over_20_hours]
@@ -49,6 +63,12 @@ def narcissism_over_20_hours(df):
 
 
 def narcissism_mental_health(df, mental_health):
+    '''
+    This function takes in a dataframe and makes various plots drawing
+    box-plot and swarmplot visualizations to show the relationship between
+    mental health disorders, like GAD and Social Phobia and Satisfaction
+    with Life, and Narcissism. Then it saves 3 files, one for each graph.
+    '''
     filtered_df = df[['Narcissism', 'GAD_T', 'SWL_T', 'SPIN_T']]
     high_narcissism = (filtered_df['Narcissism'] == 4) | \
                         (filtered_df['Narcissism'] == 5)

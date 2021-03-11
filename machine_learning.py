@@ -1,9 +1,11 @@
 '''
 Kiho Noh and Sophia Wei
 CSE163 Final Project: Online Gaming
+This program uses the pandas library and the sci-kit learn library in order
+to implement machine learning functions and algorithms to find insights on the
+data. This is to answer 3 complex research questions on online gaming habits
+and patterns and how these affect and is affected by mental health disorders.
 '''
-
-# Will need to comment the programs and methods eventually
 
 
 from sklearn.tree import DecisionTreeRegressor
@@ -16,11 +18,17 @@ import data_processing
 
 
 def ml_narcissism(df):
+    '''
+    This function takes in a dataframe and uses machine learning on data of
+    interest to find predictions and insights. It returns the errors for each
+    of the 3 models creates.
+    '''
     filtered_df = df[['Hours', 'Narcissism', 'GAD_T', 'SWL_T', 'SPIN_T']]
     over_20_hours = filtered_df['Hours'] > 20
     filtered_df = filtered_df[over_20_hours]
 
-    # Features: Weekly hours of online gaming & Total SWL score,
+    # Features: Hours, SWL, SPIN and GAD;
+    # Weekly hours of online gaming & Total SWL score;
     # Total GAD score & Total SPIN score
     # Label: degree exhibiting narcissistic tendencies
     features = filtered_df.loc[:, filtered_df.columns != 'Narcissism']
@@ -58,7 +66,6 @@ def ml_narcissism(df):
     gadspin_predictions = model3.predict(features_test3)
     gadspin_error = mean_squared_error(labels_test3, gadspin_predictions)
 
-    print(f'Error in Narcissism prediction with Hours input: {error:.2f}\nError in Narcissism prediction with GAD and SPIN scores input: {swlhours_error:.2f}\nError in Narcissism prediction with SWL score inputs: {gadspin_error:.2f}')
     return error, swlhours_error, gadspin_error
 
 

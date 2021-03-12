@@ -22,6 +22,7 @@ and can be easily downloaded from Kaggle.
 data_visualizations.py module to get the predictions and the graphs. OR can just run
 the testing.py program to get both predictions, graphs and ML errors and accuracy.
 
+-----
 
 <b>Research Questions</b>
 

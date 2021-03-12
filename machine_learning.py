@@ -40,7 +40,7 @@ def predict_GADE(data):
     # Test Accuracy
     test_predictions = model.predict(features_test)
     gade_accuracy = accuracy_score(labels_test, test_predictions)
-    
+
     return gade_accuracy
 
 

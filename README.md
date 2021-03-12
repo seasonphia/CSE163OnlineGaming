@@ -4,7 +4,23 @@ By: Kiho Noh & Sophia Wei
 
 -----
 
-! NEED to replace with instructions on how to run the project !
+<b>Instructions to Run Project</b>
+
+1. The Online Gaming Dataset can be <a href='https://www.kaggle.com/divyansh22/online-gaming-anxiety-data'>accessed here</a>
+and can be easily downloaded from Kaggle.
+2. Need to import the following libraries:
+<ul>
+<li>DecisionTreeRegressor</li>
+<li>DecisionTreeClassifier</li>
+<li>sklearn.metrics</li>
+<li>sklearn.model_selection</li>
+<li>pandas</li>
+<li>matplotlib.pyplot</li>
+<li>seaborn</li>
+</ul>
+3. In order to run our project, can run the machine_learning.py module alongside the
+data_visualizations.py module to get the predictions and the graphs. OR can just run
+the testing.py program to get both predictions, graphs and ML errors and accuracy.
 
 
 <b>Research Questions</b>

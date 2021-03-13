@@ -19,10 +19,9 @@ import data_processing
 
 def predict_GADE(data):
     """
-    Returns the test accuracy after training the ML algorithm
-    the decision tree classifer model. For the training and testing,
-    total GAD score and weekly gaming hours were used as features and
-    GADE was used as labels.
+    For the training and testing, total GAD score and weekly gaming hours were
+    used as features and GADE was used as labels. This function returns the
+    model's accuracy.
     """
     data = data[["GADE", "GAD_T", "Hours"]]
 
@@ -46,13 +45,12 @@ def predict_GADE(data):
 
 def predict_hours(data):
     """
-    Returns the mean squared errors for the testing predictions after
-    training the decision tree regressor model. For the training and
-    testing, age of individuals and current work occupation status
-    of the gamer (employed, unemployed/between jobs, student) were used
-    as features and weekly gaming hours was used as labels. For the
-    current work occupation, a categorical feature, dummy variables were used
-    to transfrom the variables into numerical values.
+    For the training and testing, age of individuals and current work
+    occupation status of the gamer (employed, unemployed/between jobs,
+    student) were used as features and weekly gaming hours was used as labels.
+    For the current work occupation, dummy variables are used to transform
+    the categorical features into numerical values. This function returns the
+    error of the model.
     """
     data = data[["Age", "Work", "Hours"]]
 
@@ -76,8 +74,9 @@ def predict_hours(data):
 def ml_narcissism(df):
     '''
     This function takes in a dataframe and uses machine learning on data of
-    interest to find predictions and insights. It returns the errors for each
-    of the 3 models creates.
+    interest to find predictions and insights. Online gaming hours, gad, swl
+    and spin scores were used as features and narcissism as labels. The
+    function returns the errors for each of the 3 models created.
     '''
     filtered_df = df[['Hours', 'Narcissism', 'GAD_T', 'SWL_T', 'SPIN_T']]
     over_20_hours = filtered_df['Hours'] > 20

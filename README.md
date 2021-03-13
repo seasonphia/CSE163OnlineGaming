@@ -19,8 +19,7 @@ and can be easily downloaded from Kaggle.
 <li>seaborn</li>
 </ul>
 3. In order to run our project, can run the machine_learning.py module alongside the
-data_visualizations.py module to get the predictions and the graphs. OR can just run
-the testing.py program to get both predictions, graphs and ML errors and accuracy.
+data_visualizations.py module to get the predictions and the graphs.
 
 -----
 

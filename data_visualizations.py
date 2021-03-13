@@ -19,7 +19,7 @@ sns.set()
 
 def avg_GAD_over_20(data):
     """
-    Returns a line graph that plots the average weekly
+    Saves a line graph that plots the average weekly
     gaming hours ( >= 20) on the x-axis and the average total GAD
     score on the y-axis to visualize the difference in
     the average total GAD score of gamers who spend more than 20 hours
@@ -44,7 +44,7 @@ def avg_GAD_over_20(data):
 
 def avg_GAD_under_20(data):
     """
-    Returns a line graph that plots the average weekly
+    Saves a line graph that plots the average weekly
     gaming hours ( < 20) on the x-axis and the average total GAD
     score on the y-axis to visualize the difference in the average
     total GAD score of a gamer who spend less than 20 hours a week on gaming.
@@ -67,7 +67,7 @@ def avg_GAD_under_20(data):
 
 def avg_hours_work(data):
     """
-    Returns a bar graph that plots the current occupation of individuals
+    Saves a bar graph that plots the current occupation of individuals
     on the x-axis and the average weekly gaming hours on the y-axis to
     visualize the relationship between the average weekly gaming hours
     and the current occupation status (unemployed/between jobs, student
@@ -92,7 +92,7 @@ def avg_hours_work(data):
 
 def hours_game_age(data):
     """
-    Returns a bar graph that plots the age of individuals
+    Saves a bar graph that plots the age of individuals
     on the x-axis and the average weekly gaming hours on the y-axis to
     visualize the relationship between the average weekly gaming hours
     and the age of the gamers.
@@ -112,7 +112,7 @@ def narcissism_gaming_hours(df):
     '''
     This function takes in a dataframe and plots a scatterplot visualization
     between online gaming hours and narcissistic tendencies and then saves
-    this file.
+    this graph.
     '''
     filtered_df = df[['Hours', 'Narcissism']]
 
@@ -131,7 +131,7 @@ def narcissism_over_20_hours(df):
     '''
     This function takes in a dataframe and plots a regression visualization
     between excessive online gaming hours (over 20 weekly hours) and
-    narcissistic tendencies and then saves this file.
+    narcissistic tendencies and then saves this graph.
     '''
     filtered_df = df[['Hours', 'Narcissism']]
     over_20_hours = df['Hours'] > 20

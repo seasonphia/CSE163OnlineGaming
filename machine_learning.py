@@ -111,7 +111,7 @@ def ml_narcissism(df):
     model3 = DecisionTreeRegressor()
     model3.fit(features_train3, labels_train3)
 
-    # Find Predictions and Compute error on Training Set and on Testing Set
+    # Find Predictions and Compute error on Testing Set
     predictions = model1.predict(features_test1)
     error = mean_squared_error(labels_test1, predictions)
 

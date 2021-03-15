@@ -36,7 +36,7 @@ def avg_GAD_over_20(data):
 
     plt.xlabel("Average Gaming Hours")
     plt.ylabel("Average GAD Score")
-    plt.title("Avg GAD Scores of Individuals Who Games More\
+    plt.title("GAD Scores of Individuals Who Game More\
     than 20 Hours a Week")
 
     plt.savefig("hours_over_20.png")
@@ -56,13 +56,13 @@ def avg_GAD_under_20(data):
     hours_under_20 = hours_under_20.groupby("Hours",
                                             as_index=False)["GAD_T"].mean()
 
-    sns.lineplot(data=hours_under_20, x="Hours", y="GAD_T")
+    sns.relplot(data=hours_under_20, x="Hours", y="GAD_T", kind='line')
 
     plt.xlabel("Average Gaming Hours")
     plt.ylabel("Average GAD Score")
     plt.title("GAD Scores of Individuals Who Game Under 20hrs/Week")
 
-    plt.savefig("hours_under_20.png")
+    plt.savefig("hours_under_20.png", bbox_inches='tight')
 
 
 def avg_hours_work(data):
@@ -86,8 +86,8 @@ def avg_hours_work(data):
     plt.ylabel("Average Gaming Hours")
     plt.title("Average Weekly Gaming hours of College students\
     and Unemployed Individuals")
-    graph.set_xticklabels(graph.get_xticklabels(), fontsize=9)
-    plt.savefig("work-gaming.png")
+    graph.set_xticklabels(graph.get_xticklabels(), fontsize=8)
+    plt.savefig("work-gaming.png", bbox_inches='tight')
 
 
 def hours_game_age(data):

@@ -8,7 +8,7 @@ By: Kiho Noh & Sophia Wei
 
 1. The Online Gaming Dataset can be <a href='https://www.kaggle.com/divyansh22/online-gaming-anxiety-data'>accessed here</a>
 and can be easily downloaded from Kaggle.
-2. Need to import the following libraries:
+2. Need to import these following libraries:
 <ul>
 <li>DecisionTreeRegressor</li>
 <li>DecisionTreeClassifier</li>
@@ -18,8 +18,21 @@ and can be easily downloaded from Kaggle.
 <li>matplotlib.pyplot</li>
 <li>seaborn</li>
 </ul>
-3. In order to run our project, can run the machine_learning.py module alongside the
-data_visualizations.py module to get the predictions and the graphs.
+3. In order to run our project, run the machine_learning.py module alongside the
+data_visualizations.py module to get the predictions and the graphs. After
+running the data_visualizations.py module, 9 graphs should be generated as png
+files as follows:
+<ul>
+<li>age_gaming.png</li>
+<li>excessivegamingnarcissism.png</li>
+<li>Generalized Anxiety Disorder.png</li>
+<li>hours_over_20.png</li>
+<li>hours_under_20.png</li>
+<li>onlinegamingnarcissism.png</li>
+<li>Satisfaction With Life.png</li>
+<li>Social Phobia Inventory Score.png</li>
+<li>work-gaming.png</li>
+</ul>
 
 -----
 
@@ -36,7 +49,7 @@ the narcissism scale?
 -----
 
 
-<b>Dataset</b>
+<b>Information on the Dataset</b>
 
 The dataset we are using contains information collected about online gaming anxiety,
 specifically gaming in association to GAD, satisfaction with life and social phobia. This dataset
@@ -47,6 +60,4 @@ While the dataset includes general identifying information such as gender, age a
 employment status, it also encompasses questions about what game a person plays, gaming
 platforms, the amount of time spent gaming weekly, whether there are any earnings or streaming
 for the games, and the reasons an individual plays the game. These are all categories that factor
-into anxiety, satisfaction with life and social phobia. The psychological study therefore also
-asked and received informative answers on questions involving the gaming individual’s level of
-anxiety, satisfaction with life and degree of social phobia.
+into anxiety, satisfaction with life, social phobia and even narcissistic tendencies and behaviors. The psychological study therefore also asked and received informative answers on questions involving the gaming individual’s level of anxiety, satisfaction with life and degree of social phobia.

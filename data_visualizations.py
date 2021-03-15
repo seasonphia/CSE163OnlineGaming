@@ -105,7 +105,7 @@ def hours_game_age(data):
     plt.ylabel("Average Gaming Hours")
     plt.title("Average Weekly Gaming hours of Different Age Groups")
     graph.set_xticklabels(graph.get_xticklabels(), fontsize=9)
-    plt.savefig("age-gaming.png")
+    plt.savefig("age-gaming.png", bbox_inches='tight')
 
 
 def narcissism_gaming_hours(df):
